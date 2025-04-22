@@ -29,10 +29,11 @@ import java.util.Scanner;
    }
    /*
 
-     */
-    public static class FamousQuotes {
+     */ //WITH TRY/CATCH
+    public class FamousQuotes {
         public static void main(String[] args) {
-        String[] quotes = new String[10];
+
+            String[] quotes = new String[10];
             quotes[0] = "I think, therefore I am. (Rene Descartes)";
             quotes[1] = "I may disagree with what you say, but I will defend to death your right to say it. (Evelyn Beatrice Hall)";
             quotes[2] = "Ignorance is bliss.";
@@ -50,14 +51,13 @@ import java.util.Scanner;
 
             try {
                 int choice = scanner.nextInt();
-                System.out.println(quotes[choice -1]);
+                System.out.println(quotes[choice - 1]);
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("Invalid quote number, Please enter a number between 1-10.");
             }
 
             scanner.close();
 
+
         }
-
-
-
+    }
